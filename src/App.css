@@ -7,6 +7,13 @@
   height: 80px;
 }
 
+.btn-margin {
+  margin: 5px 5px;
+  background-color: aquamarine;
+}
+.no-border {
+  border-radius: 0px;
+}
 .App-header {
   background-color: #222;
   height: 150px;

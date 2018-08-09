@@ -1,8 +1,10 @@
 import React from 'react';
 import io from "socket.io-client";
-import {BrowserRouter as Router,Link} from 'react-router-dom';
 
 class Chat extends React.Component {
+  componentWillMount() {
+    this.setState({ name: localStorage.username });
+    };
   constructor(props) {
     super(props);
 
@@ -22,8 +24,8 @@ class Chat extends React.Component {
 
     this.sendMessage = ev => {
       ev.preventDefault();
-      if(this.state.name === '' || this.state.message === '' ){
-        console.log("Name or Message cannot be empty!");
+      if(this.state.message === '' ){
+        console.log("Message cannot be empty!");
       }
       else{
       this.socket.emit('SEND_MESSAGE', {
@@ -61,8 +63,6 @@ class Chat extends React.Component {
                   })}
                 </div>
                 <div className="footer">
-                  <input type="text" placeholder="Enter your name..."  className="form-control" value={this.state.name} onChange={ev => this.setState({ name: ev.target.value })} />
-                  <br />
                   <div className="input-group mb-3">
                   <textarea style={{width: 1100,resize:'none'}} type="text" placeholder="Type a message..." className="form-control" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} />
                     <div className="input-group-addon">
@@ -78,6 +78,5 @@ class Chat extends React.Component {
     );
   }
 }
-
 
 export default Chat;

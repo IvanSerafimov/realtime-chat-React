@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^9.7.3",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^3.3.7",
+    "events": "^3.0.0",
+    "express": "^4.16.3",
     "history": "^4.7.2",
     "jquery": "^3.3.1",
-    "mongodb": "^3.0.10",
-    "mongoose": "^5.1.2",
+    "nodemon": "^1.18.3",
     "popper": "^1.0.1",
     "popper.js": "^1.14.3",
     "react": "^16.4.0",
@@ -24,5 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:5000"
+
 }

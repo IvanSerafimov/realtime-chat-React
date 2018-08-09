@@ -20,7 +20,7 @@ class FAQ extends React.Component {
         </Panel>
         <Panel eventKey="2">
           <Panel.Heading>
-            <Panel.Title toggle>What do the numbers and letters mean?</Panel.Title>
+            <Panel.Title toggle>What do the numbers and letters on the device mean?</Panel.Title>
           </Panel.Heading>
           <Panel.Body collapsible>
           They signify the different settings of the device. The easiest setting is A1, while F5 is the most difficult.
